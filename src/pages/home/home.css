@@ -1,0 +1,209 @@
+.home-page.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.home-page .home-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* flex-direction: column; */
+  border: 1px solid transparent;
+  min-width: 100%;
+  min-height: 30em;
+  flex-wrap: wrap;
+  padding: 0 180px;
+}
+
+.home-page .home-content button {
+  all: unset;
+  background-color: #F41479;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 500;
+  transition: .3s;
+}
+
+.home-page .home-content button:hover {
+  transform: scale(1.03);
+}
+
+.home-page .home-content button:active {
+  transform: scale(.9);
+}
+
+/* level - 3 */
+
+.home-page .home-content .home-btns {
+  border: 1px solid transparent;
+  padding: 10px;
+  min-width: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home-page .home-content .home-btns button {
+  margin: 0;
+}
+
+.home-page .home-content .home-btns .opt {
+  min-width: 100px;
+  height: 40px;
+  /* align-items: center; */
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.home-page .home-content .home-btns .opt option {
+  padding: 0 30px;
+  text-align: center;
+}
+
+/*
+=======================================
+All Tasks
+=======================================
+*/
+
+
+.home-page .home-content .all-tasks {
+  border: 1px solid transparent;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 10em;
+  padding: 30px 50px;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.home-page .home-content .all-tasks article {
+  border: 3px solid gold;
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  flex-direction: column;
+  height: 10em;
+  width: 300px;
+  /* padding: 0 35px; */
+  border-radius: 5px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  
+}
+
+.home-page .home-content .all-tasks article a {
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  flex-direction: column;
+  height: 10em;
+  width: 300px;
+  padding: 0 35px;
+  /* padding: 0 18px; */
+  text-decoration: none;
+}
+
+.App.light .home-page .home-content .all-tasks article:hover {
+  border-color: teal;
+}
+
+.home-page .home-content .all-tasks article:hover {
+  border-color: #fff;
+}
+
+.home-page .home-content .all-tasks article::before {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 100%;
+  background-color: gold;
+  left: -2px;
+  top: 0;
+  border-radius: 5px 0 0 5px;
+}
+
+.App.light .home-page .home-content .all-tasks article:hover::before {
+  background-color: teal;
+}
+
+.home-page .home-content .all-tasks article:hover::before {
+  background-color: #fff;
+}
+
+.home-page .home-content .all-tasks article h2 {
+  text-align: center;
+  width: 100%;
+}
+
+.home-page .home-content .all-tasks article ul {
+
+  list-style-type: circle;  
+  height: 48px;
+  overflow: hidden;
+  list-style-position: inside;
+}
+
+.home-page .home-content .all-tasks article p {
+  text-align: end;
+  width: 100%;
+}
+
+
+/*
+=======================================
+Colors For Light Theme
+=======================================
+*/
+
+.App.light .all-tasks article a :where(h2, ul li, p) {
+  color: #000;
+}
+
+.App.light .model-details li{
+  color: #fff;
+}
+
+/*
+=======================================
+Model Details
+=======================================
+*/
+
+.model-details {
+  overflow-y: auto;
+  max-height: 100px;
+}
+
+
+
+/*
+=======================================
+task message
+=======================================
+*/
+
+.task-message {
+  background-color: white;
+  color: #000;
+  font-weight: 600;
+  padding: 10px 30px;
+  font-size: 20px;
+  border-radius: 5px;
+  position: absolute;
+  top: 10%;
+  transition: .5s;
+}
+
+.task-message .icon-correct {
+  color: darkgreen;
+}

@@ -1,0 +1,123 @@
+.parent-of-model {
+  width: 100%;
+  height: 100%;
+  background-color: #333333d8;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.form-forgot {
+  background-color: #26302F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  /* top: -50%; */
+  height: 300px;
+  min-width: 400px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  align-content: center;
+  gap: 20px;
+  transition: .5s;
+  animation: modeling .5s 1;
+}
+
+/*
+=================================
+key-frames
+=================================
+*/
+
+@keyframes modeling {
+  0%{
+    top: -50%;
+  }
+
+  100%{
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+
+.form-forgot button {
+  padding: 7px 30px;
+}
+
+.form-forgot input {
+  width: 250px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+.App.dark .form-forgot {
+  background-color: #fff;
+}
+
+.App.dark .form-forgot input {
+  background-color: #ddd;
+}
+
+.form-forgot .form-forgot__icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.form-forgot .form-forgot__icon span {
+  width: 8px;
+  height: 8px;
+  background-color: #ff3d4a;
+  border-radius: 5px;
+  position: relative;
+  transform: rotate(-180deg);
+  transition: .5s;
+}
+
+.form-forgot .form-forgot__icon span::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #ff3d4a;
+  transform: rotate(90deg);
+  border-radius: 5px;
+  transition: .5s;
+}
+
+.form-forgot .form-forgot__icon:hover span {
+  height: 30px;
+  background-color: gold;
+  transform: rotate(45deg);
+}
+
+.form-forgot .form-forgot__icon:hover span::before {
+  background-color: gold;
+}
+
+.form-forgot .form-forgot__p-check {
+  color: #fff;
+}
+
+.App.dark .form-forgot .form-forgot__p-check {
+  color: #000;
+}
+
+

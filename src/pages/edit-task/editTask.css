@@ -1,0 +1,225 @@
+/*
+=======================================
+table of content
+=======================================
+*/
+
+.my-edit-task
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.my-edit-task .edit-task__content
+{
+  border: 5px solid transparent;
+  max-width: 800px;
+  height: 35em;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  align-items: center;
+  flex-direction: column;
+  /* margin: 0 auto; */
+}
+
+
+/*
+=======================================
+1- title
+=======================================
+*/
+
+.my-edit-task .edit-task__content .title {
+  width: 800px;
+  border: 1px solid transparent;
+  text-align: center;
+}
+
+.my-edit-task .edit-task__content .title .input-title {
+  width: 300px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  caret-color: #FF725E;
+}
+
+.my-edit-task .edit-task__content .title .edit-icon {
+  font-size: 25px;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.my-edit-task .edit-task__content .title .edit-icon:hover {
+  color: #9f9f9f;
+}
+
+
+/*
+=======================================
+2- sub-tasks section
+=======================================
+*/
+
+.my-edit-task .edit-task__content .edit-task__tasks {
+  border: 1px solid transparent;
+  min-height: 300px;
+  width: 100%;
+}
+
+.my-edit-task .edit-task__content .edit-task__tasks article:nth-child(1) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid transparent;
+}
+
+.my-edit-task .edit-task__content .edit-task__tasks article:nth-child(1) .edit-task__label-checkbox {
+  font-size: 18px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.my-edit-task .edit-task__content .edit-task__tasks article:nth-child(1) .edit-task__label-checkbox .edit-task__input-checkbox {
+  margin-left: 10px;
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  accent-color: green;
+}
+
+.my-edit-task .edit-task__content .edit-task__tasks ul {
+  border: 1px solid transparent;
+  list-style: none;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  padding: 10px 0;
+  gap: 20px;
+  height: 322px;
+  overflow-y: auto;
+}
+
+.my-edit-task .edit-task__content .edit-task__tasks ul li {
+  background-color: #344645;
+  width: 100%;
+  min-height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  border-radius: 10px;
+  transition: all .5s;
+  border-left: 7px solid #FF725E;
+}
+
+.my-edit-task .edit-task__content .edit-task__tasks ul li:hover {
+  background-color: #48605f;
+}
+
+.my-edit-task .edit-task__content .edit-task__tasks ul li p {
+  font-size: 18px;
+}
+
+.my-edit-task .edit-task__content .edit-task__tasks ul li i {
+  font-size: 18px;
+  color: #FF725E;
+  cursor: pointer;
+}
+
+.my-edit-task .edit-task__content .edit-task__tasks ul li i:hover {
+  animation: animate 1.3s 1 alternate;
+  transform: scale(1.3);
+}
+
+@keyframes animate {
+  0%{
+    transform: rotate(20deg) scale(1.3);
+  }
+  10%{
+    transform: rotate(-20deg) scale(1.3);
+  }
+  50%{
+    transform: rotate(20deg) scale(1.3);
+  }
+  70%{
+    transform: rotate(-20deg) scale(1.3);
+  }
+  100%{
+    transform: rotate(20deg) scale(1.3);
+  }
+}
+
+.my-edit-task .edit-task__content .edit-task__tasks ul .add-new-task {
+  justify-content: start;
+  gap: 20px;
+}
+
+.my-edit-task .edit-task__content .edit-task__tasks ul .add-new-task :where(.add, .cancel) {
+  padding: 5px 10px;
+  background-color: #20b68b;
+  margin: 0;
+  font-size: 13px;
+}
+
+.my-edit-task .edit-task__content .edit-task__tasks ul .add-new-task .input-add-task {
+  height: 30px;
+  border-radius: 5px;
+  padding-left: 10px;
+  border: none;
+}
+
+.my-edit-task .edit-task__content .edit-task__tasks ul .add-new-task .input-add-task:focus {
+  outline: none;
+}
+
+.my-edit-task .edit-task__content .edit-task__tasks ul .add-new-task .add-new-task-form {
+  display: flex;
+  gap: 20px;
+}
+
+/*
+=======================================
+3- BTN-S section
+=======================================
+*/
+
+
+.my-edit-task .edit-task__content .edit-task__btns {
+  border: 1px solid transparent;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.my-edit-task .edit-task__content .edit-task__btns button:nth-child(1) {
+  background-color: #20b68b;
+}
+
+
+/*
+=======================================
+Colors For light theme
+=======================================
+*/
+
+.App.light .my-edit-task .edit-task__content :where(li p) {
+  color: #fff;
+}
+
+
+.App.light .my-edit-task .edit-task__content :where(.input-title) {
+  color: #000;
+}
+

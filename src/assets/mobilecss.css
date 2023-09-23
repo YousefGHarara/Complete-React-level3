@@ -1,0 +1,58 @@
+
+
+/* header */
+
+@media (max-width: 885px) {
+
+  /* .home-page.main { */
+    /* min-height: 250vh; */
+  /* } */
+
+
+  .my-header .navbar {
+    flex-direction: column;
+  } 
+
+  .my-header .navbar .links {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .my-header .navbar .links li a {
+    padding: 20px 10px;
+  }
+
+  .App .my-header
+  {
+    padding: 30px 40px;
+  }
+
+  h1
+  {
+    font-style:12px;
+  }
+
+  .main h1
+  {
+    font-size: 19px;
+  }
+
+  .my-footer p
+  {
+    font-size: 12px;
+  }
+
+  
+.App.dark .my-signup .signup__content,
+.App.light .my-signup .signup__content
+{
+  padding: 4px 17px;
+}
+
+.App.dark .my-signin .signin__content,
+.App.light .my-signin .signin__content
+{
+  padding: 14px 8px;
+}
+
+}
